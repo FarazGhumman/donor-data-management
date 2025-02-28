@@ -6,7 +6,7 @@ import json
 def load_data():
 
     try:
-        with open('New_Donor_Data.json', 'r') as file:
+        with open('donor_data.json', 'r') as file:
             return json.load(file)
     except FileNotFoundError:
         return []
@@ -14,7 +14,7 @@ def load_data():
 
 def save_data_helper(donorData):
 
-    with open('New_Donor_Data.json', 'w') as file:
+    with open('donor_data.json', 'w') as file:
         json.dump(donorData, file)
 
 
